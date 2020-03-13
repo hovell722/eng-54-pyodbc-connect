@@ -14,12 +14,13 @@ class MSDBConnection():
         self.cursor = self.conn.cursor()
 
 
+    def __sql_query(self, query):
+        return self.cursor.execute(query)
 
 
-
-nw_db_object = MSDBConnection()
-
-rows = nw_db_object.sql_query('SELECT * FROM Products')
-
-print(rows.fetchone())
+# nw_db_object = MSDBConnection()
+#
+# rows = nw_db_object.sql_query('SELECT * FROM Products')
+#
+# print(rows.fetchone())
 
